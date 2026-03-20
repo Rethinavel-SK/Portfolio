@@ -1,0 +1,28 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+.card {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 14px; padding: 1.5rem;
+  opacity: 0; transform: translateY(24px);
+  transition: opacity .5s, transform .5s, border-color .3s, box-shadow .3s;
+  box-shadow: var(--shadow);
+}
+.card:hover { border-color: var(--accent); transform: translateY(-4px) !important; box-shadow: 0 8px 32px rgba(79,70,229,0.15); }
+.visible { opacity: 1; transform: translateY(0); }
+.catTitle {
+  font-size: .82rem; text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--accent2); margin-bottom: 1rem;
+  font-family: 'Fira Code', monospace;
+}
+.tags { display: flex; flex-wrap: wrap; gap: .5rem; }
+.tags span {
+  background: rgba(79,70,229,.08); border: 1px solid rgba(79,70,229,.2);
+  color: var(--accent); padding: .3rem .8rem; border-radius: 20px; font-size: .82rem;
+  transition: background .3s, transform .2s;
+  cursor: default;
+}
+.tags span:hover { background: rgba(79,70,229,.18); transform: scale(1.05); }
